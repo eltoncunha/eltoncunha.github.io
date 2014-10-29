@@ -169,3 +169,23 @@ p {
 	padding:0;
 	text-align:justify;
 }
+
+/*CSS para impressão*/
+@media print {
+	* {
+		color:#000000 !important;
+		text-shadow:none !important;
+	}
+	.controls, #outras_empresas_span {
+		display:none;
+	}
+	a {
+		margin-right:0px;
+	}
+	#curriculo {
+		margin:0 auto;
+	}
+	h1 {
+		border:1px solid rgb(0, 0, 0);
+	}
+}
