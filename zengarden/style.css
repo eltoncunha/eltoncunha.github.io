@@ -1,0 +1,350 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	min-width:440px;
+	}
+#css-zen-garden {
+	background: #fff url(imagens/zen/plano_de_fundo_4.jpg) no-repeat bottom right;
+	background-size:100% 100%;
+	}
+body { 
+	/*
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	*/
+	min-width:420px;
+	width:80%;
+	margin:0 auto;
+	/* border:solid; */
+	display:table;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h1, h2 {
+	margin:0;
+	}
+h3 { 
+	font: italic 30px Verdana;
+	letter-spacing: 1px; 
+	margin: 10px 0; 
+	color: #7D775C;
+	text-shadow: 1px 1px white, -1px -1px #333;
+	font-weight: bold;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper { 
+	background: url(zen-bg.jpg) no-repeat top left; 
+	/* padding: 0 175px 0 110px; */
+	margin: 0;
+	height:100%;
+	min-width:400px;
+	display:table;
+	position: relative;
+	/* background-color: #E9F0DF;  */
+	}
+
+.intro { 
+	/* min-width: 470px; */
+	width: 100%;
+	margin:0 auto 1% auto;
+	display:table;
+	/* background-color: #859CA4; Cabeçalho */
+	}
+
+header h1 { 
+	margin-top:10px;
+	font-size:50px;
+	color: #B2DFEE;
+	} 
+	
+header h2 { 
+	margin-top:5px;
+	font-size:30px;
+	color: #C1CDCD;
+	} 
+header {
+	padding-top: 5px;
+	padding-left: 15px;
+	height: 120px;
+	/* background-color: rgba(255, 255, 255, 0.3);  Cabeçalho */
+	text-shadow: -1px -1px white, 1px 1px #333;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px; 
+	font-family:Arial;
+	font-size:20px;
+}
+
+.summary {
+	clear: both; 
+	margin: 10px 0px 0 0px; 
+	width: 30%;
+	min-width:450px;
+	float: left;
+	border-radius:5px;
+	/* background-color: rgba(255, 255, 255, 0.3);  Cabeçalho */
+	}
+.summary p {
+	font: italic 1.1em/2.2 georgia; 
+	text-align: center;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 0px 10px 10px 10px;
+	margin: 0px 0px 10px 0px; 
+	float: left;
+	border-radius:5px;
+	width: 65%;
+	min-width:430px; /* Cabeçalho
+	background-color: rgba(255, 255, 255, 0.3);  */
+	}
+.preamble p {
+	padding:10px;
+	font: bold 14px Verdana;
+	color:#FFFFFF;
+	}
+.supporting {
+	width:70%;	
+	/* padding: 10px; */
+	/* margin-left:1%; */
+	min-width:450px;
+	/* background-color: #B37B7D; Body */
+	display:table;
+	float:left;
+	}
+/*
+.explanation, .participation, .benefits, .requirements {
+	min-width:200px;
+	width:40%;
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	}
+*/
+.explanation, .participation, .benefits, .requirements {
+	/* padding:5px; */
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	/* width:47%; */
+	width:100%;
+	min-width:410px;
+	background-color: rgba(255, 255, 255, 0.3);
+	float:left;
+	margin-top:10px;
+	margin-left:0;
+	display:table;
+	}
+	
+.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+	color:#FFFFFF;
+	font-family: Arial, "Times New Roman", Georgia, Serif;
+	font-style: normal;
+	font-weight:bold; 
+	font-size:30px;
+	margin:0;
+	padding-left:10px;
+	padding-top:3px;
+    text-align:left;
+    height:38px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	}
+.explanation h3 {
+	background-image:url("imagens/zen/titulo_azul.png");
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	}
+.participation h3 {
+	background-image:url("imagens/zen/titulo_vermelho.png");
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	}
+.benefits h3 {
+	background-image:url("imagens/zen/titulo_verde.png");
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	}
+.requirements h3 {
+	background-image:url("imagens/zen/titulo_preto.png");
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	}
+
+.explanation p, .participation p, .requirements p {
+	padding:20px;
+	color:#FFFFFF;
+	font-size:16px;
+	font-family:arial;
+	font-weight:bold;
+	min-width:395px;
+	width:45%;
+	float:left;
+	}
+.explanation p {
+	height:140px;
+	}
+.participation p {
+	height:120px;
+	}
+.requirements p {
+	height:200px;
+	}	
+.benefits p {
+	padding:20px;
+	color:#FFFFFF;
+	font-size:16px;
+	font-family:arial;
+	font-weight:bold;
+	min-width:380px;
+	width:88%;
+	margin:5px auto;
+	}	
+footer { 
+	float:left;
+	margin-top:10px;
+	padding:5px 0;
+	width:100%;
+	text-align: center; 
+	background-color: rgba(232,91,35, 0.3); /* Rodapé */
+	}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	font-size:25px;
+	color:#EDD500;
+	}
+.zen-validate-html {
+	/* display:block; */
+	}
+.sidebar {
+	/*
+	margin-left: 600px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	*/
+	width:25%;
+	min-width:440px;
+	/* height:100%;	 */
+
+	background-color: rgba(225,228,214, 0.3); /* #E9F0DF Menu Lateral */
+	float:left;
+	border-radius:5px;
+	margin-top:10px;
+	margin-left:1%;
+	}
+p {
+	margin:5px;
+	padding:5px;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius:5px;
+	}
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 
+	background: transparent url(paper-bg.jpg) top left repeat-y;
+	padding: 0 10px; 
+	/* margin-top: 150px; */
+	min-width: 420px; 
+	}
+nav {
+	margin-top:20px;
+	padding:0;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius:5px;
+	width:420px;
+	}
+.design-name {
+	font-size:20px;
+	}
+.sidebar h3.select { 
+	background: transparent url(h3.gif) no-repeat top left; 
+	margin: 5px 0; 
+	width: 97px; 
+	height: 16px; 
+	font-size:25px;
+	white-space: nowrap;
+	}
+.sidebar h3.archives { 
+	background: transparent url(h5.gif) no-repeat top left; 
+	margin: 5px 0; 
+	width: 97px; 
+	height: 16px; 
+	font-size:25px;
+	white-space: nowrap;
+	}
+.sidebar h3.resources { 
+	background: transparent url(h6.gif) no-repeat top left; 
+	margin: 5px 0; 
+	width: 97px; 
+	height: 16px; 
+	font-size:25px;
+	white-space: nowrap;
+	}
+.sidebar ul {
+	margin: 0;
+	padding: 10px;
+	}
+.sidebar ul li {
+	line-height: 1.3em; 
+	background: transparent url(cr1.gif) no-repeat top center; 
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #988F5E;
+	}
+.sidebar li a:visited {
+	color: #B3AE94;
+	}
+
+
+.extra1 {
+	background: transparent url(cr2.gif) top left no-repeat; 
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}
