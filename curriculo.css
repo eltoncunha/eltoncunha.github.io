@@ -16,7 +16,7 @@ body {
 	margin-left:100px;
 	width:250px;
 	height:200px;
-	background-image:url("elton.png");
+	background-image:url("http://www.infohomebh.com.br/desenvolvedor/elton_p.gif");
 	background-size:100% 100%;
 	/* Aplicando Sombra */
 	-webkit-filter:drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
@@ -67,7 +67,7 @@ ul {
 }
 img {
 	float:left;
-	width:120px;
+	width:150px;
 	-webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
