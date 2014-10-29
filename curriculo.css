@@ -15,7 +15,7 @@ body {
 	bottom:0;
 	margin-left:100px;
 	width:250px;
-	height:200px;
+	height:380px;
 	background-image:url("http://www.infohomebh.com.br/desenvolvedor/elton_p.gif");
 	background-size:100% 100%;
 	/* Aplicando Sombra */
@@ -61,7 +61,7 @@ ul {
 	display:table; 
 }
 .info_pessoais {
-	width:600px;
+	width:550px;
 	float:left;
 	margin-left:20px;
 }
