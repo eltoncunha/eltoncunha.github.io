@@ -18,20 +18,10 @@
   
   jQuery(document).ready(function(){
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
-      
-      $("body").html(data);
-      //var items = [];
-      //$.each(data, function( key, val ) {
-        //alert(val);
-        //$("#table tbody").append("<tr><td>"+key+"</td><td>"+val+"</td></tr>")
-        //items.push( "<li id='" + key + "'>" + val + "</li>" );
-      //});
-      /*
-      $("<ul/>", {
-        "class": "my-new-list",
-        html: items.join( "" )
-      }).appendTo( "body" );
-      */
+      var items = [];
+      $.each(data, function( key, val ) {
+        $("#table tbody").append("<tr><td>"+key+"</td><td>"+val+"</td></tr>")
+      });
     });
   });
   </script>
