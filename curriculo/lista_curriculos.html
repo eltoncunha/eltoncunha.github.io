@@ -15,7 +15,7 @@
   <script>
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
       $.each(data, function(key, val) {
-        $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_github']+"'>Currículo</a></td></tr>")
+        $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
       });
     });
   </script>
