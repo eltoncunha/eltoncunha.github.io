@@ -44,46 +44,6 @@
         $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
       });
     });
-  
-    $(function() {
-      $('#table th').click(function() {
-        var id = $(this).attr('id');
-        var asc = (!$(this).attr('asc')); // switch the order, true if not set
-        
-        // set asc="asc" when sorted in ascending order
-        $('#table th').each(function() {
-            $(this).removeAttr('asc');
-        });
-        if (asc) $(this).attr('asc', 'asc');
-        
-        sortResults(id, asc);
-      });
-          
-      showResults();
-    });
-    
-    function sortResults(prop, asc) {
-      data = data.sort(function(a, b) {
-          if (asc) return (a[prop] > b[prop]);
-          else return (b[prop] > a[prop]);
-      });
-      showResults();
-    }
-    
-    function showResults () {
-      var html = '';
-      for (var e in data) {
-          html += '<tr>'
-              +'<td>'+data['id']+'</td>'
-              +'<td>'+data['nome']+'</td>'
-              +'<td>'+data['mini_curriculo']+'</td>'
-              +'<td>'+data['link_html']+'</td>'
-          +'</tr>';
-      }
-      $('#results').html(html);
-    }
-    
-    
   </script>
 </body>
 </html>
