@@ -19,11 +19,10 @@
   
   $("#table tbody").append("<tr><td>Elton</td><td>Cunha</td></tr>");
   
-  jQuery(document).ready(function(){
+  $(document).ready(function(){
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
-      var items = [];
-      $.each(data, function( key, val ) {
-        $("#table tbody").append("<tr><td>"+key+"</td><td>"+val+"</td></tr>")
+      $.each(data, function(key, val) {
+        $("#table tbody").append("<tr><td>Elton</td><td>Cunha</td></tr>")
       });
     });
   });
