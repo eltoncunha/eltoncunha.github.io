@@ -1,22 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Untitled Document</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Currículo - Elton</title>
+  <meta charset="UTF-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-
 <body>
-<script>
-$.getJSON("http://rarolabs.com.br:88/alunos.json", function(data) {
-  var items = [];
-  $.each( data, function( key, val ) {
-  items.push( "<li id='" + key + "'>" + val + "</li>" );
-});
-$("<ul/>", {
-  "class": "my-new-list",
-  html: items.join( "" )
-  }).appendTo( "body" );
-});
-</script>
+  <script>
+  $.getJSON("http://rarolabs.com.br:88/alunos.json", function(data) {
+    var items = [];
+    $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+  $("<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+    }).appendTo( "body" );
+  });
+  </script>
 
 </body>
 </html>
