@@ -38,7 +38,15 @@
     <tbody></tbody>
   </table>
   <script>
+    function sortResults(prop, asc) {
+      people = people.sort(function(a, b) {
+          if (asc) return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+          else return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+      });
+      return people;
+    }
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
+      data = sortResults(id, true);
       $.each(data, function(key, val) {
         $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
       });
