@@ -33,18 +33,48 @@
   <h1>LISTA DE CURRÍCULOS</h1>
   <table id="table">
     <thead>
-      <th>CÓDIGO</th><th>NOME</th><th>MINI-CURRÍCULO</th><th>LINK</th>
+      <th id="id">CÓDIGO</th><th id="nome">NOME</th><th id="mine_curriculo">MINI-CURRÍCULO</th><th id="link_html">LINK</th>
     </thead>
-    <tbody></tbody>
+    <tbody id="results"></tbody>
   </table>
   <script>
-    function sortResults(prop, asc) {
-      people = people.sort(function(a, b) {
-          if (asc) return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
-          else return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+    $(function() {
+      $('#table th').click(function() {
+        var id = $(this).attr('id');
+        var asc = (!$(this).attr('asc')); // switch the order, true if not set
+        
+        // set asc="asc" when sorted in ascending order
+        $('#table th').each(function() {
+            $(this).removeAttr('asc');
+        });
+        if (asc) $(this).attr('asc', 'asc');
+        
+        sortResults(id, asc);
       });
-      return people;
+          
+      showResults();
+    });
+    
+    function sortResults(prop, asc) {
+      arr = arr.sort(function(a, b) {
+          if (asc) return (a[prop] > b[prop]);
+          else return (b[prop] > a[prop]);
+      });
+      showResults();
     }
+    
+    function showResults () {
+      var html = '';
+      for (var e in arr) {
+          html += '<tr>'
+              +'<td>'+arr[e].f_name+'</td>'
+              +'<td>'+arr[e].l_name+'</td>'
+              +'<td>'+arr[e].age+'</td>'
+          +'</tr>';
+      }
+      $('#results').html(html);
+    }
+    
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
       data = sortResults(id, true);
       $.each(data, function(key, val) {
