@@ -56,7 +56,7 @@
     });
     
     function sortResults(prop, asc) {
-      arr = arr.sort(function(a, b) {
+      val = val.sort(function(a, b) {
           if (asc) return (a[prop] > b[prop]);
           else return (b[prop] > a[prop]);
       });
@@ -65,11 +65,12 @@
     
     function showResults () {
       var html = '';
-      for (var e in arr) {
+      for (var e in val) {
           html += '<tr>'
-              +'<td>'+arr[e].f_name+'</td>'
-              +'<td>'+arr[e].l_name+'</td>'
-              +'<td>'+arr[e].age+'</td>'
+              +'<td>'+val[e].id+'</td>'
+              +'<td>'+val[e].nome+'</td>'
+              +'<td>'+val[e].mini_curriculo+'</td>'
+              +'<td>'+val[e].link_html+'</td>'
           +'</tr>';
       }
       $('#results').html(html);
