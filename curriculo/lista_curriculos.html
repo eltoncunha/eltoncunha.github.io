@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+<script>
+$.getJSON("http://rarolabs.com.br:88/alunos.json", function(data) {
+  var items = [];
+  $.each( data, function( key, val ) {
+  items.push( "<li id='" + key + "'>" + val + "</li>" );
+});
+$("<ul/>", {
+  "class": "my-new-list",
+  html: items.join( "" )
+  }).appendTo( "body" );
+});
+</script>
+
+</body>
+</html>
