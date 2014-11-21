@@ -38,6 +38,13 @@
     <tbody id="results"></tbody>
   </table>
   <script>
+    $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
+      data = sortResults(id, true);
+      $.each(data, function(key, val) {
+        $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
+      });
+    });
+  
     $(function() {
       $('#table th').click(function() {
         var id = $(this).attr('id');
@@ -56,7 +63,7 @@
     });
     
     function sortResults(prop, asc) {
-      val = val.sort(function(a, b) {
+      data = data.sort(function(a, b) {
           if (asc) return (a[prop] > b[prop]);
           else return (b[prop] > a[prop]);
       });
@@ -65,23 +72,18 @@
     
     function showResults () {
       var html = '';
-      for (var e in val) {
+      for (var e in data) {
           html += '<tr>'
-              +'<td>'+val[e].id+'</td>'
-              +'<td>'+val[e].nome+'</td>'
-              +'<td>'+val[e].mini_curriculo+'</td>'
-              +'<td>'+val[e].link_html+'</td>'
+              +'<td>'+data['id']+'</td>'
+              +'<td>'+data['nome']+'</td>'
+              +'<td>'+data['mini_curriculo']+'</td>'
+              +'<td>'+data['link_html']+'</td>'
           +'</tr>';
       }
       $('#results').html(html);
     }
     
-    $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
-      data = sortResults(id, true);
-      $.each(data, function(key, val) {
-        $("#table tbody").append("<tr><td>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
-      });
-    });
+    
   </script>
 </body>
 </html>
