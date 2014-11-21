@@ -38,7 +38,12 @@
     <tbody id="results"></tbody>
   </table>
   <script>
+    function sortJsonName(a, b){
+        return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
+    };
+  
     $.getJSON("http://rarolabs.com.br:88/alunos.json", "json", function(data) {
+      data = $(data).sort(sortJsonName);
       $.each(data, function(key, val) {
         $("#table tbody").append("<tr><td align='center'>"+val['id']+"</td><td>"+val['nome']+"</td><td>"+val['mini_curriculo']+"</td><td><a href='"+val['link_html']+"'>Currículo</a></td></tr>")
       });
